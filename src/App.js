@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import Body from "./components/Body";
+import "./App.css";
 
 function App() {
+  const api = {
+    key: "11681b0954bd40370c8101e26c37bca3",
+    base: "https://api.openweathermap.org/data/2.5/weather?",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Body api={api}/>
+    </>
   );
 }
 
